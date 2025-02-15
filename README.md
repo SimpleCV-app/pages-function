@@ -2,21 +2,13 @@
 
 ## 🧰 Usage
 
-### GET /ping
+### GET /{page}
 
-- Returns a "Pong" message.
+- Returns either the HTML page or a PDF file.
 
-**Response**
+### GET /{page}/raw
 
-Sample `200` Response:
-
-```text
-Pong
-```
-
-### GET, POST, PUT, PATCH, DELETE /
-
-- Returns a "Learn More" JSON response.
+- Returns the raw JSON page
 
 **Response**
 
@@ -24,10 +16,29 @@ Sample `200` Response:
 
 ```json
 {
-  "motto": "Build like a team of hundreds_",
-  "learn": "https://appwrite.io/docs",
-  "connect": "https://appwrite.io/discord",
-  "getInspired": "https://builtwith.appwrite.io"
+  "views": 4,
+  "type": "digital",
+  "uid": "x",
+  "published": true,
+  "title": "Test Digital CV",
+  "cover_letter": "Test Digital CV",
+  "template": null,
+  "ctr": 0,
+  "$id": "x",
+  "$createdAt": "2025-02-08T17:32:48.169+00:00",
+  "$updatedAt": "2025-02-15T00:14:28.287+00:00",
+  "$permissions": [
+    "update(\"user:x\")",
+    "delete(\"user:x\")",
+    "read(\"user:x\")"
+  ],
+  "contact_details": [],
+  "work_experience": [],
+  "education": [],
+  "skills": [],
+  "reference": [],
+  "$databaseId": "cvb-db0",
+  "$collectionId": "pages"
 }
 ```
 
@@ -43,4 +54,6 @@ Sample `200` Response:
 
 ## 🔒 Environment Variables
 
-No environment variables required.
+| Environment Variable |
+|----------------------|
+| MAIN_DB_ID           |
