@@ -1,0 +1,27 @@
+{
+    "projectId": "cv-buddy",
+    "functions": [
+        {
+            "$id": "pages",
+            "name": "Pages",
+            "runtime": "python-3.12",
+            "specification": "s-0.5vcpu-512mb",
+            "execute": [
+                "any"
+            ],
+            "events": [],
+            "scopes": [
+                "users.read",
+                "documents.read",
+                "documents.write"
+            ],
+            "schedule": "",
+            "timeout": 15,
+            "enabled": true,
+            "logging": true,
+            "entrypoint": "src/main.py",
+            "commands": "pip install -r requirements.txt",
+            "path": "."
+        }
+    ]
+}
